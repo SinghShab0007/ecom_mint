@@ -1,0 +1,13 @@
+{
+    "name": "OrderManagement",
+    "alias": "order_management",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\OrderManagement\\Providers\\OrderManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

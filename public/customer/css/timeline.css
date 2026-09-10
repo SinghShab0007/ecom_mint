@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F2F3F7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.maan-mybazar-order-details {
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.maan-mybazar-order-details h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.maan-order-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.maan-order-heading .order-side h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.maan-order-heading .order-side p {
+  font-size: 12px;
+}
+.maan-order-heading .price-side p {
+  font-size: 18px;
+}
+
+.mybazar-order-processing {
+  background: #fff;
+}
+.mybazar-order-processing .processing-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+.mybazar-order-processing .left-side p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.mybazar-order-processing .left-side span {
+  font-size: 12px;
+  font-weight: 400;
+}
+.mybazar-order-processing .left-side span a {
+  color: background: var(--color-orange);;
+}
+.mybazar-order-processing .right-side a {
+  font-size: 16px;
+  font-weight: 400;
+  color: background: var(--color-orange);;
+}
+
+.mybazar-processing-body {
+  padding: 15px;
+  padding-bottom: 30px;
+}
+.mybazar-processing-body .mybazar-delivery-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mybazar-processing-body .mybazar-delivery-title p {
+  color: #008000;
+  font-size: 16px;
+  font-weight: 400;
+}
+.mybazar-processing-body .mybazar-delivery-title span {
+  font-size: 16px;
+  color: #000;
+}
+
+.processing-timeline {
+  display: block;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.processing-timeline .mybazar-timeline {
+  position: relative;
+}
+.processing-timeline .mybazar-timeline li {
+  list-style: none;
+  float: left;
+  width: 33.3333%;
+  position: relative;
+  text-align: center;
+}
+.processing-timeline .mybazar-timeline li span {
+  display: block;
+  margin-top: 45px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.processing-timeline .mybazar-timeline li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 4px solid grey;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto 10px auto;
+  background: #fff;
+  color: #000;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  left: 50%;
+  z-index: 2;
+}
+.processing-timeline .mybazar-timeline li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: grey;
+  top: 25px;
+  left: -50%;
+  z-index: -999;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  z-index: 1;
+}
+.processing-timeline .mybazar-timeline ul:nth-child(1) {
+  color: #4caf50;
+}
+.processing-timeline .mybazar-timeline li:first-child:after {
+  content: none;
+}
+.processing-timeline .mybazar-timeline li.active-tl {
+  color: #555555;
+}
+.processing-timeline .mybazar-timeline li.active-tl:before {
+  background: #fff;
+  color: #fff;
+  border-color: background: var(--color-orange);;
+}
+
+.processing-timeline .mybazar-timeline li.active-tl::after {
+    background: background: var(--color-orange);;
+}
+
+.maan-timeline-tab-content {
+  max-width: 950px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.maan-timeline-tab-content .timeline-content {
+  display: none;
+  background: #F2F3F7;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #ddd;
+}
+.maan-timeline-tab-content .timeline-content:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  top: -18px;
+  height: 25px;
+  width: 25px;
+  background: #F2F3F7;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-transform: translate(70px, 0px);
+          transform: translate(70px, 0px);
+}
+.maan-timeline-tab-content .timeline-content:nth-child(2):after {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+}
+.maan-timeline-tab-content .timeline-content:last-child:after {
+  left: 93%;
+  -webkit-transform: translate(-93%, 0px);
+          transform: translate(-93%, 0px);
+}
+.maan-timeline-tab-content .timeline-content p {
+  font-size: 16px;
+  color: #838181;
+  margin-bottom: 15px;
+}
+.maan-timeline-tab-content .timeline-content p span {
+  color: #000;
+}
+.maan-timeline-tab-content .timeline-content a {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: background: var(--color-orange);;
+  text-transform: uppercase;
+}
+.maan-timeline-tab-content .timeline-content.tab-active {
+  display: block;
+}
+
+.mybazar-product-items-with-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+}
+.mybazar-product-items-with-details .thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+}
+.mybazar-product-items-with-details .thumb img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 15px;
+}
+.mybazar-product-items-with-details .thumb p {
+  display: block;
+  font-size: 16px;
+  color: #000;
+}
+.mybazar-product-items-with-details .thumb span {
+  font-size: 12px;
+  color: #000;
+  display: block;
+}
+.mybazar-product-items-with-details a {
+  font-size: 16px;
+  color: background: var(--color-orange);;
+  text-transform: capitalize;
+}
+
+@media(max-width: 767px){
+  .maan-mybazar-order-details {
+    padding: 60px 15px;
+  }
+  .mybazar-product-items-with-details .thumb {
+    width: 180px;
+  }
+  .maan-product-cancel-items{
+    min-width: 700px;
+  }
+}
+@media(max-width: 575px){
+  .maan-order-heading{
+    display: block;
+  }
+  .mybazar-product-items-with-details .thumb {
+    width: 180px;
+  }
+  .mybazar-processing-body .mybazar-delivery-title span {
+    display: block;
+    margin-left: 30px;
+  }
+  .mybazar-product-items-wrp{
+    overflow: auto;
+  }
+  .mybazar-product-items-with-details{
+    min-width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+{
+    "name": "SellerManagement",
+    "alias": "seller_management",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\SellerManagement\\Providers\\SellerManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

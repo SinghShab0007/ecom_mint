@@ -1,0 +1,13 @@
+{
+    "name": "PaymentSystem",
+    "alias": "payment_system",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\PaymentSystem\\Providers\\PaymentSystemServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

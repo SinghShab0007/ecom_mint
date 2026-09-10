@@ -1,0 +1,13 @@
+{
+    "name": "RefundSystem",
+    "alias": "refund_system",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\RefundSystem\\Providers\\RefundSystemServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,13 @@
+{
+    "name": "OfflineManagement",
+    "alias": "offline_management",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\OfflineManagement\\Providers\\OfflineManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,112 @@
+
+/*Rtl version css start */
+html[dir="rtl"] .top-bar .top-bar-right{
+    text-align: left;
+}
+html[dir="rtl"] .top-bar .top-bar-right > ul > li{
+    border-right: 0;
+    border-left: 1px solid #cccccc;
+}
+html[dir="rtl"] .top-bar .top-bar-left li{
+    border-left: 0;
+    border-right: 1px solid #cccccc;
+}
+html[dir="rtl"] .mid-bar .mair-right{
+    text-align: left;
+}
+html[dir="rtl"] .mid-bar .mid-search .input-group button {
+    border-radius: 50px 0px 0px 50px !important;
+}
+html[dir="rtl"] .banner .swiper-slide{
+    direction: ltr;
+}
+html[dir="rtl"] .banner-add-wrapper .banner-add-thumb{
+    margin-right: 0;
+    margin-left: 15px;
+}
+html[dir="rtl"] .side-mega-manu a .arrow{
+    right: auto;
+    left: 0;
+    transform: rotate(180deg);
+}
+html[dir="rtl"] .category-list a img,
+html[dir="rtl"] .side-mega-manu a img{
+    margin-right: 0;
+    margin-left: 10px;
+}
+html[dir="rtl"] .category-list a .arrow,
+html[dir="rtl"] .side-mega-manu a .arrow{
+    top: 5px;
+    right: auto;
+    left: 0;
+    transform: rotate(180deg);
+}
+html[dir="rtl"] .category-list li:hover > .mega-manu,
+html[dir="rtl"] .side-mega-manu li:hover > .mega-manu{
+    left: 0;
+    right: 100%;
+}
+html[dir="rtl"] .category-list .mega-manu,
+html[dir="rtl"] .side-mega-manu .mega-manu{
+    left: 0;
+    right: 100%;
+}
+html[dir="rtl"] .manu-bar .category-manu .category-list{
+    text-align: right;
+}
+html[dir="rtl"] .dropdown.category-manu .dropdown-menu.category-list{
+    padding-right: 10px;
+}
+html[dir="rtl"] .discount .dis-card .profile-img img{
+    transform: scaleX(-1.5) !important;
+}
+html[dir="rtl"] .ad-poster .animation-one {
+    left: auto;
+    right: 320px;
+}
+html[dir="rtl"] .ad-poster .animation-two {
+    left: auto;
+    right: 520px;
+}
+html[dir="rtl"] .ad-poster .animation-three {
+    left: auto;
+    right: 60px;
+}
+html[dir="rtl"] .ad-poster .animation-four {
+    left: auto;
+    right: 200px;
+}
+html[dir="rtl"] .ad-poster .animation-five {
+    left: auto;
+    right: 30px;
+}
+html[dir="rtl"] .ad-poster .addposter-btn-wrapper{
+    text-align: left;
+}
+html[dir="rtl"] .offer-count .offset-lg-7{
+    margin-right: 0;
+    margin-left: auto;
+}
+html[dir="rtl"] section .main-title::after{
+    left: auto;
+    right: 0;
+}
+html[dir="rtl"] section .main-title .right-link{
+    text-align: left;
+}
+
+html[dir="rtl"] .maan-mybazar-filter .maan-filter-right .filter-grid a{
+    margin-left: 0;
+    margin-right: 15px;
+}
+html[dir="rtl"] .shop-list .sidebar .sidebar-widget .widget-popular li .pro-img{
+    margin-right: 0;
+    margin-left: 15px;
+}
+html[dir="rtl"] footer .info-footer h6::after{
+    left: auto;
+    right: 0;
+}
+html[dir="ltr"] .manu-bar .category-manu .category-list {
+    text-align: left;
+}

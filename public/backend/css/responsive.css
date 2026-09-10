@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+/*
+Theme Name: Mshop Dashboard Teamplate
+Theme URI: 
+Developed by: Abdullah Al Numan 
+Version: 1.0
+License: 
+Tags: 
+*/
+
+
+/*================================================
+[  Table of contents  ]
+================================================
+    
+======================================
+[ End table content ]
+======================================*/
+
+@media (min-width: 1200px) {
+    .content-heaader .container,
+    .content-body .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .content-heaader .right-content .popup-search {
+        display: block;
+    }
+    .content-body .order-manu .nav-tabs {
+        grid-template-columns: auto auto;
+    }
+    .content-body .order-manu .nav-tabs .nav-link:nth-last-child(3),
+    .content-body .order-manu .nav-tabs .nav-link:nth-last-child(4) {
+        margin-bottom: 0px;
+    }
+}
+
+@media(max-width:991px) {
+    .side-bar {
+        left: -100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .side-bar.active {
+        width: 300px;
+    }
+    .side-bar.active .side-bar-manu,
+    .side-bar.active .side-bar-manu .arrow {
+        text-align: inherit;
+    }
+    .side-bar.active .side-bar-manu .arrow {
+        display: inherit;
+    }
+    .side-bar.active .side-bar-manu .title {
+        font-size: 13px;
+        margin: 0px 15px;
+        line-height: 18px;
+    }
+    .side-bar.active .side-bar-manu li.active ul {
+        display: block !important;
+    }
+    .side-bar.active .side-bar-manu ul li a {
+        width: calc(100% - 35px);
+        padding: 15px 15px 15px 30px;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .side-bar.active .side-bar-manu li ul a {
+        padding: 0px 0px 0px 20px;
+    }
+    .side-bar .side-bar-logo {
+        padding: 17px 24px;
+        margin-bottom: 0px;
+    }
+    .side-bar.active .side-bar-logo a {
+        max-width: 100px;
+    }
+    .side-bar .overlay {
+        display: block;
+        position: fixed;
+        width: calc(100% - 300px);
+        height: 100%;
+        top: 0;
+        left: -300px;
+        opacity: 0;
+        visibility: hidden;
+        background: #191919;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .side-bar.active {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    .side-bar.active .overlay {
+        left: 300px;
+        opacity: 0.2;
+        visibility: visible;
+    }
+    .side-bar .side-bar-logo .close-btn {
+        display: inline-block;
+    }
+    main {
+        width: 100%;
+        margin-left: 0;
+    }
+    main.active .content-heaader .header-logo {
+        max-width: 100px;
+    }
+    .content-heaader {
+        padding: 12px 0px;
+    }
+    .content-heaader .header-logo {
+        display: inline-block;
+        max-width: 100px;
+        opacity: 1;
+        margin-left: 12px;
+        visibility: visible;
+    }
+    .content-heaader .header-logo a {
+        display: inline-block;
+        max-width: 70px;
+        margin-right: 10px;
+    }
+    .search-name {
+        margin-top: 24px;
+    }
+    .content-heaader .left-content .e-btn,
+    .content-heaader .left-content .t-drop-down,
+    .content-heaader .right-content .lang-flag {
+        display: none;
+    }
+    .content-heaader .left-content button.side-btn svg {
+        --svg-font-size: 22px;
+    }
+    .content-heaader .right-content .lang-flag,
+    .content-heaader .right-content .popup-search,
+    .content-heaader .right-content .in-box,
+    .content-heaader .right-content .notification {
+        margin-right: 18px;
+    }
+    .content-heaader .right-content .popup-search>button svg,
+    .content-heaader .right-content .in-box button svg,
+    .content-heaader .right-content .notification button svg {
+        --svg-font-size: 16px;
+    }
+    .content-heaader .right-content .profile button.profile-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .content-heaader .right-content .profile .dropdown-menu::before {
+        right: 0;
+    }
+    .content-heaader .right-content .in-box .dropdown-menu,
+    .content-heaader .right-content .notification .dropdown-menu {
+        width: 350px;
+        padding: 24px;
+    }
+    .content-heaader .right-content .in-box .dropdown-menu::before,
+    .content-heaader .right-content .notification .dropdown-menu::before {
+        right: 0px;
+    }
+    .content-heaader .right-content .in-box .dropdown-menu .send-profile,
+    .content-heaader .right-content .notification .dropdown-menu .send-profile {
+        width: 80px;
+        margin-bottom: 24px;
+    }
+    .content-heaader .right-content .in-box .dropdown-menu .send-content,
+    .content-heaader .right-content .in-box .dropdown-menu .send-time,
+    .content-heaader .right-content .notification .dropdown-menu .send-content,
+    .content-heaader .right-content .notification .dropdown-menu .send-time {
+        text-align: inherit;
+    }
+    .content-heaader .right-content .in-box .dropdown-menu .send-content,
+    .content-heaader .right-content .notification .dropdown-menu .send-content {
+        margin-bottom: 12px;
+    }
+    .content-heaader .right-content .in-box button.show~.dropdown-menu,
+    .content-heaader .right-content .notification button.show~.dropdown-menu {
+        top: calc(100% + 38px) !important;
+    }
+}
+
+@media(max-width:767px) {
+    .content-heaader .right-content .in-box .dropdown-menu,
+    .content-heaader .right-content .notification .dropdown-menu {
+        width: 190px;
+    }
+    .content-body .s-category {
+        margin: 24px 0px;
+    }
+    .content-body .p-tab-manu {
+        grid-template-columns: auto auto;
+        grid-gap: 24px;
+    }
+    .content-body .p-tab-manu button {
+        grid-row-start: inherit;
+        grid-row-end: inherit;
+        margin-bottom: 0px;
+    }
+    .p-tab-manu {
+        display: block;
+    }
+    .p-tab-manu .nav-link {
+        width: 100% !important;
+        border-right: 1px solid #D8D8D8 !important;
+        border-radius: 5px !important;
+        margin-bottom: 15px;
+    }
+    .p-tab-manu .nav-link:last-child {
+        margin-bottom: 0px;
+    }
+    .pos-form .pos-left .sm-mb-30 {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:479px) {
+    .login-section .login-form .log-user,
+    .login-section .login-form .forget-user {
+        grid-template-columns: auto;
+    }
+    .login-section .login-form .log-user li:nth-child(1) button,
+    .login-section .login-form .log-user li:nth-child(2) button,
+    .login-section .login-form .log-user li:nth-child(3) button {
+        border-radius: 5px;
+    }
+    .login-section .login-form .log-user li:nth-child(2) button,
+    .login-section .login-form .log-user li:nth-child(3) button,
+    .login-section .login-form .forget-user li:nth-child(2) a,
+    .login-section .login-form .forget-user li:nth-child(3) a {
+        margin-top: 12px;
+    }
+    .login-section .login-form .forget-user li:nth-child(1) a,
+    .login-section .login-form .forget-user li:nth-child(2) a,
+    .login-section .login-form .forget-user li:nth-child(3) a {
+        text-align: center;
+    }
+    .login-section .login-form .forget-user li:nth-child(2) a {
+        margin-right: 0px;
+    }
+    .side-bar {
+        width: 100% !important;
+        left: -100%;
+    }
+    .side-bar.active .side-bar-manu ul li a,
+    .side-bar.active:hover .side-bar-manu ul li a {
+        display: block;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .side-bar .side-bar-manu ul li a .arrow {
+        right: 24px;
+    }
+    .content-body .order-manu .nav-tabs,
+    .content-body .p-tab-manu {
+        grid-template-columns: auto;
+    }
+    .content-heaader .left-content button.side-btn svg {
+        --svg-font-size: 15px;
+    }
+    .content-heaader .right-content .lang-flag,
+    .content-heaader .right-content .popup-search,
+    .content-heaader .right-content .in-box,
+    .content-heaader .right-content .notification {
+        margin-right: 14px;
+    }
+    .content-heaader .right-content .popup-search>button svg,
+    .content-heaader .right-content .in-box button svg,
+    .content-heaader .right-content .notification button svg {
+        --svg-font-size: 12px;
+    }
+    .content-heaader .right-content .profile button.profile-btn {
+        width: 30px;
+        height: 30px;
+    }
+    .big-card .countdown>div {
+        display: block;
+        margin: 0 auto 30px auto !important;
+    }
+}

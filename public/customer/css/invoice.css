@@ -1,0 +1,162 @@
+body {
+  /*font-family: "Roboto", sans-serif;*/
+}
+body * {
+  margin: 0;
+  padding: 0;
+}
+body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body p {
+  margin: 0;
+  padding: 0;
+}
+
+.row-billing-wrp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row-billing-wrp .col-billing-items{
+  width: 50%;
+  padding: 10px;
+}
+/* my bazar invoice css */
+
+.mybazar-product-info-billing .table{
+  width: 100%;
+}
+
+.maan-mybazar-invoice {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.my-bazar-invoice-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+.my-bazar-invoice-header .logo {
+  display: block;
+}
+.my-bazar-invoice-header .logo img {
+  max-width: 100%;
+}
+.my-bazar-invoice-header .customer-detail {
+  text-align: right;
+}
+.my-bazar-invoice-header .customer-detail p {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0;
+}
+
+.mybazar-billing-info .billing-info {
+  padding: 15px 30px;
+  border: 1px dashed #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 200px;
+}
+.mybazar-billing-info .billing-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.mybazar-billing-info .billing-info ul li {
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+}
+.mybazar-billing-info .billing-info ul li span{
+    width: 80px;
+    font-weight: 500;
+}
+.mybazar-billing-info h5 {
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.mybazar-billing-info h5 span {
+  font-weight: 700;
+  width: 100px;
+}
+
+.mybazar-product-info-billing {
+  margin-top: 30px;
+}
+.mybazar-product-info-billing .table thead tr {
+  text-align: center;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+}
+.mybazar-product-info-billing .table thead tr th {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.mybazar-product-info-billing .table thead tr th:first-child {
+  text-align: left;
+}
+.mybazar-product-info-billing .table tbody {
+  border: none;
+}
+.mybazar-product-info-billing .table tbody tr {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.mybazar-product-info-billing .table tbody tr td {
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+.mybazar-product-info-billing .table tbody tr td:first-child {
+  text-align: left;
+}
+
+.mybazar-total-info {
+  text-align: right;
+  margin-top: 30px;
+}
+.mybazar-total-info ul li {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 14px;
+}
+.mybazar-total-info ul li span {
+  max-width: 160px;
+  display: block;
+  width: 100%;
+}
+.mybazar-total-info ul li:last-child {
+  font-weight: 700;
+}
+
+.signature {
+  margin-top: 30px;
+}
+
+.user-dashbord .order-content .content-table.maan-mybazar-order-dashboard .table tbody tr td:last-child a {
+  padding: 5px;
+  border: 1px solid gray;
+  color: gray;
+}

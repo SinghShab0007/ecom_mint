@@ -1,0 +1,13 @@
+{
+    "name": "ProductManagement",
+    "alias": "product_management",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\ProductManagement\\Providers\\ProductManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

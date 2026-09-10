@@ -1,0 +1,13 @@
+{
+    "name": "PosManager",
+    "alias": "pos_manager",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\PosManager\\Providers\\PosManagerServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

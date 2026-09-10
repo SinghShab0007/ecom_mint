@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="26" viewBox="0 0 24 26">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="24" height="26" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g transform="translate(-1676 -611)">
+      <rect id="Rectangle_146" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1667 -611)">
+      <rect id="Rectangle_146-2" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1658 -611)">
+      <rect id="Rectangle_146-3" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1676 -601)">
+      <rect id="Rectangle_146-4" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1667 -601)">
+      <rect id="Rectangle_146-5" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1658 -601)">
+      <rect id="Rectangle_146-6" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1676 -591)">
+      <rect id="Rectangle_146-7" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1667 -591)">
+      <rect id="Rectangle_146-8" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+    <g transform="translate(-1658 -591)">
+      <rect id="Rectangle_146-9" data-name="Rectangle 146" width="6" height="6" transform="translate(1676 611)" fill="#8b8b8b"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+{
+    "name": "PromotionManagement",
+    "alias": "promotionmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\PromotionManagement\\Providers\\PromotionManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

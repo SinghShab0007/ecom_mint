@@ -1,0 +1,153 @@
+body{
+    overflow-x: hidden;
+}
+.topNav{
+    margin-top: -15px !important;
+    margin-bottom: 15px;
+    background-color: #b1b1b1;
+    width: 100%;
+    height: 65px;
+}
+
+/*Custom Button size*/
+.btn-size{
+    width: 50px;
+    height: 45px;
+}
+.fa-position{
+    font-size: 35px !important;
+    line-height: 45px !important;
+}
+
+
+/*table css*/
+
+.margin-top-bottom{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 300px;
+}
+.fa-color{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    cursor: default;
+}
+.th_btn_color{
+    text-align: center !important;
+    color: red !important;
+    font-size: 20px !important;
+}
+.th_head_align{
+    text-align: center !important;
+}
+.th_head_qty{
+    /*text-align: center !important;*/
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+    /*width: 232px;*/
+    width: 206px;
+    padding-left:10px !important;
+    padding-right:10px !important;
+}
+.th_head_product{
+    width:193px !important;
+}
+.th_table_width{
+    width: 715px;
+
+}
+.th_table_div_width{
+    width: 733px;
+    height: 315px;
+    overflow: auto;
+
+}
+.scroll_bar_table {
+    height: 360px !important;
+    overflow-y:scroll !important;
+}
+
+.formSize{
+    width: 162px;
+    text-align: center;
+}
+
+/*pos payment received */
+/*Poss Category*/
+.btn-ctg-size{
+    margin-left:5px;
+    margin-bottom: 10px;
+    width: 125px;
+    height: 110px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+}
+
+/*Right Layout*/
+.button_style{
+    margin:0;
+    padding: 0;
+}
+.card_shadow{
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.11);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.11);
+}
+.card_shadow:hover{background: linear-gradient(314deg, #bdbdbde3, #bdbdbde3);
+}
+.image_style img{
+    width: 90%;
+    height: 60px;
+    margin: 5px 5px 5px 5px;
+}
+.pragraph_title p{
+   font-size: 10px;
+   margin: 5px 0px 0px 5px;
+}
+.pragraph_title{
+  height: 25px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.img-wh-50{
+    width: 50px;
+    height: 50px;
+}
+
+.img-wh-60{
+    width: 60px;
+    height: 60px;
+}
+
+.img-wh-100{
+    width: 100px;
+    height: 100px;
+}
+
+.img-wh-200{
+    width: 200px;
+    height: 200px;
+}
+

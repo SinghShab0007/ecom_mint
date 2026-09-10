@@ -1,0 +1,1246 @@
+/*--------------------------------------
+	- maan-wrapper
+----------------------------------------*/
+/* 1. Theme default css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --base-html-font-size: 62.5%;
+  --roboto: "Roboto", sans-serif;
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+  --fs-10: 10px;
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-17: 17px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-23: 23px;
+  --fs-24: 24px;
+  --fs-25: 25px;
+  --fs-26: 26px;
+  --fs-27: 27px;
+  --fs-28: 28px;
+  --fs-29: 29px;
+  --fs-30: 30px;
+  --clr-black: #000;
+  --clr-black-10:rgba(12, 25, 40, 0.7);
+  --clr-black-20: #14183E;
+  --clr-white:#fff;
+  --lp-dark-bg:#141426;
+  --lp-light-bg:#FFFFFF;
+  --maan-icon-clr:#03A9F4;
+  --maan-ct-clr:#0C1928;
+  --maan-ct-header-bg: rgba(255, 73, 128, 0.1);
+  --maan-ct-header-bg-2:rgba(14, 180, 255, 0.1);
+  --maan-ct-header-bg-3:rgba(209, 255, 26, 0.1);
+  --maan-ct-header-bg-4:rgba(175, 73, 255, 0.1);
+  --maan-ct-box-shadow: 8px 10px 80px rgba(0, 15, 55, 0.04);
+  --maan-clr-1:rgba(255, 164, 28, 0.1);
+  --maan-clr-2:background: var(--color-orange);;
+  --maan-clr-3:rgba(37, 212, 169, 0.1);
+  --maan-clr-4: #25D4A9;
+  --lp-call-item-bg:linear-gradient(189deg, #00FFD1 -9.69%, #0057FF 110.38%);
+}
+
+/* font-family: 'Heebo', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Mulish', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto', sans-serif; */
+.mybazar-maindashboard {
+  /*=======================================================
+     main-content navbar-design start
+     ===============================================*/
+}
+.mybazar-maindashboard body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.mybazar-maindashboard .container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.mybazar-maindashboard .img {
+  max-width: 100%;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.mybazar-maindashboard img {
+  height: auto;
+  max-width: 100%;
+}
+.mybazar-maindashboard .f-left {
+  float: left;
+}
+.mybazar-maindashboard .f-right {
+  float: right;
+}
+.mybazar-maindashboard .fix {
+  overflow: hidden;
+}
+.mybazar-maindashboard a,
+.mybazar-maindashboard .button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.mybazar-maindashboard a:focus,
+.mybazar-maindashboard .button:focus {
+  text-decoration: none;
+  outline: none;
+}
+.mybazar-maindashboard a:focus,
+.mybazar-maindashboard a:hover,
+.mybazar-maindashboard .portfolio-cat a:hover,
+.mybazar-maindashboard .footer -menu li a:hover {
+  color: #2B96CC;
+  text-decoration: none;
+}
+.mybazar-maindashboard a {
+  text-decoration: none;
+}
+.mybazar-maindashboard a,
+.mybazar-maindashboard button {
+  color: #1696e7;
+  outline: medium none;
+}
+.mybazar-maindashboard .uppercase {
+  text-transform: uppercase;
+}
+.mybazar-maindashboard .capitalize {
+  text-transform: capitalize;
+}
+.mybazar-maindashboard h1,
+.mybazar-maindashboard h2,
+.mybazar-maindashboard h3,
+.mybazar-maindashboard h4,
+.mybazar-maindashboard h5,
+.mybazar-maindashboard h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  color: #313131;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: normal;
+}
+.mybazar-maindashboard h1 a,
+.mybazar-maindashboard h2 a,
+.mybazar-maindashboard h3 a,
+.mybazar-maindashboard h4 a,
+.mybazar-maindashboard h5 a,
+.mybazar-maindashboard h6 a {
+  color: inherit;
+}
+.mybazar-maindashboard h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.mybazar-maindashboard h2 {
+  font-size: 35px;
+}
+.mybazar-maindashboard h3 {
+  font-size: 28px;
+}
+.mybazar-maindashboard h4 {
+  font-size: 22px;
+}
+.mybazar-maindashboard h5 {
+  font-size: 18px;
+}
+.mybazar-maindashboard h6 {
+  font-size: 16px;
+}
+.mybazar-maindashboard ul {
+  margin: 0px;
+  padding: 0px;
+}
+.mybazar-maindashboard li {
+  list-style: none;
+}
+.mybazar-maindashboard p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #7e7e7e;
+  margin-bottom: 15px;
+}
+.mybazar-maindashboard hr {
+  border-bottom: 1px solid #eceff8;
+  border-top: 0 none;
+  margin: 30px 0;
+  padding: 0;
+}
+.mybazar-maindashboard label {
+  color: #7e7e7e;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+.mybazar-maindashboard *::-moz-selection {
+  background: #d6b161;
+  color: #fff;
+  text-shadow: none;
+}
+.mybazar-maindashboard ::-moz-selection {
+  background: #444;
+  color: #fff;
+  text-shadow: none;
+}
+.mybazar-maindashboard ::selection {
+  background: #444;
+  color: #fff;
+  text-shadow: none;
+}
+.mybazar-maindashboard *::-moz-placeholder {
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.8;
+}
+.mybazar-maindashboard *::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+}
+.mybazar-maindashboard *:-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+}
+.mybazar-maindashboard *::-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+}
+.mybazar-maindashboard *::placeholder {
+  color: #fff;
+  font-size: 16px;
+  opacity: 0.8;
+}
+.mybazar-maindashboard .theme-overlay {
+  position: relative;
+}
+.mybazar-maindashboard .theme-overlay::before {
+  background: #1696e7 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.mybazar-maindashboard .theme-btn {
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.mybazar-maindashboard .separator {
+  border-top: 1px solid #f2f2f2;
+}
+.mybazar-maindashboard .btn.btn-large {
+  padding: 10px 25px;
+}
+.mybazar-maindashboard .btn-lg {
+  font-weight: 700;
+  padding: 13px 31px;
+}
+.mybazar-maindashboard .btn.white-btn:hover {
+  border-color: #ddd;
+  color: #ddd;
+}
+.mybazar-maindashboard .btn.btn-base.btn-link {
+  background: transparent none repeat scroll 0 0;
+  border: 0 none;
+  color: #1696e7;
+  padding: 0;
+  text-decoration: none;
+}
+.mybazar-maindashboard .btn.btn-base.btn-link:hover {
+  color: #106fab;
+}
+.mybazar-maindashboard .theme-bg {
+  background: #1696e7;
+}
+.mybazar-maindashboard .bg-white {
+  background-color: #ffffff;
+}
+.mybazar-maindashboard .breadcrumb > .active {
+  color: #888;
+}
+.mybazar-maindashboard .maan-rightside-content {
+  /*width: calc(100% - 290px);*/
+  position: relative;
+  float: right;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #EEEEEE;
+}
+.mybazar-maindashboard .maan-main-content {
+  background: #eff3f6;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+/* .mybazar-maindashboard .maan-main-content .active {
+  width: calc(100% - 80px);
+} */
+.mybazar-maindashboard #content {
+  /* width: calc(100% - 290px); */
+  position: relative;
+  float: right;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #EEEEEE;
+}
+/* .mybazar-maindashboard #content.active {
+  width: calc(100% - 80px);
+} */
+.mybazar-maindashboard .maan-state-overview {
+  --maan-item-bg: var(--clr-white);
+  --maan-item-shadow: 8px 10px 80px rgba(0, 15, 55, 0.04);
+  --maan-item-radius: 25px;
+  --maan-header-bg: var(--maan-ct-header-bg);
+  --maan-ct-shadow: var(--maan-ct-box-shadow);
+  --maan-title-ff: var(--roboto);
+  --maan-title-fw: var(--fw-500);
+  --maan-title-fs: var(--fs-30);
+  --maan-title-clr: var(--clr-black-10);
+  --maan-p-ff: var(--roboto);
+  --maan-p-fw: var(--fw-400);
+  --maan-p-fs: var(--fs-20);
+  --maan-p-clr: var(--clr-black-10);
+  --maan-ct-title-ff: var(--roboto);
+  --maan-ct-title-fw: var(--fw-400);
+  --maan-ct-title-fs: var(--fs-18);
+  --maan-ct-title-clr: var(--maan-ct-clr);
+  --maan-ct-p-ff: var(--roboto);
+  --maan-ct-p-fw: var(--fw-400);
+  --maan-ct-p-fs: var(--fs-18);
+  --maan-ct-p-clr: var(--maan-ct-clr);
+  --maan-dg-ff: var(--roboto);
+  --maan-dg-fw: var(--fw-400);
+  --maan-dg-fs: var(--fs-12);
+  --maan-dg-clr: var(--maan-icon-clr);
+  --maan-date-ff: var(--roboto);
+  --maan-date-fw: var(--fw-400);
+  --maan-date-fs: var(--fs-14);
+  --maan-date-clr: var(--clr-black-10);
+  --maan-apt-title-ff: var(--roboto);
+  --maan-apt-title-fw: var(--fw-400);
+  --maan-apt-title-fs: var(--fs-14);
+  --maan-apt-title-clr: var(--maan-icon-clr);
+  --maan-note-title-ff: var(--roboto);
+  --maan-note-title-fw: var(--fw-400);
+  --maan-note-title-fs: var(--fs-14);
+  --maan-note-title-clr: var(--clr-black-10);
+  --maan-btn-title-ff: var(--roboto);
+  --maan-btn-title-fw: var(--fw-400);
+  --maan-btn-title-fs: var(--fs-16);
+  --maan-icon-clr: var(--clr-black);
+  --maan-icon-bg: transparent;
+}
+.mybazar-maindashboard .maan-state-overview .maan-counter-title {
+  font-family: var(--maan-title-ff);
+  font-weight: var(--maan-title-fw);
+  font-size: var(--maan-title-fs);
+  color: var(--clr-black-10);
+}
+.mybazar-maindashboard .maan-state-overview .count-icon {
+  font-family: var(--maan-title-ff);
+  font-weight: var(--maan-title-fw);
+  font-size: var(--maan-title-fs);
+  color: var(--clr-black-10);
+}
+.mybazar-maindashboard .maan-state-overview .maan-counter-content {
+  font-family: var(--maan-p-ff);
+  font-weight: var(--maan-p-fw);
+  font-size: var(--maan-p-fs);
+  color: var(--clr-black-10);
+}
+.mybazar-maindashboard .maan-state-overview .maan-chart-title {
+  font-family: var(--maan-ct-title-ff);
+  font-weight: var(--maan-ct-title-fw);
+  font-size: 18px;
+  color: var(--clr-black-10);
+  line-height: 21px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-chart-content {
+  font-family: var(--maan-ct-p-ff);
+  font-weight: var(--maan-ct-p-fw);
+  font-size: var(--maan-ct-p-fs);
+  color: var(--clr-black-10);
+  line-height: 21px;
+  opacity: 0.7;
+}
+.mybazar-maindashboard .maan-state-overview .maan-appoint-dg {
+  font-family: var(--maan-dg-ff);
+  font-weight: var(--maan-dg-fw);
+  font-size: var(--maan-dg-fs);
+  color: var(--maan-dg-clr);
+  line-height: 14px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-date {
+  font-family: var(--maan-date-ff);
+  font-weight: var(--maan-date-fw);
+  font-size: var(--maan-date-fs);
+  color: var(--maan-date-clr);
+  line-height: 16px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-title {
+  font-family: var(--maan-apt-title-ff);
+  font-weight: var(--maan-apt-title-fw);
+  font-size: var(--maan-apt-title-fs);
+  line-height: 16px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-note {
+  font-family: var(--maan-note-title-ff);
+  font-weight: var(--maan-note-title-fw);
+  font-size: var(--maan-note-title-fs);
+  color: var(--maan-note-title-clr);
+  line-height: 19px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-btn {
+  font-family: var(--maan-btn-title-ff);
+  font-weight: var(--maan-btn-title-fw);
+  font-size: var(--maan-btn-title-fs);
+  color: var(--maan-btn-title-clr);
+  line-height: 19px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-clr {
+  --maan-note-title-clr: var(--clr-black);
+}
+.mybazar-maindashboard .maan-state-overview .maan-p-clr {
+  --maan-note-title-clr: var(--maan-ct-clr);
+}
+.mybazar-maindashboard .maan-state-overview .maan-radius {
+  --maan-item-radius: 17px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-app-radius {
+  --maan-item-radius: 8px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-chart-radius {
+  --maan-item-radius: 25px 25px 0px 0px;
+}
+.mybazar-maindashboard .maan-state-overview .maan-appoint-header-bg {
+  --maan-header-bg: var(--maan-ct-header-bg-2);
+}
+.mybazar-maindashboard .maan-state-overview .maan-appoint-header-bg2 {
+  --maan-header-bg: var(--maan-ct-header-bg-3);
+}
+.mybazar-maindashboard .maan-state-overview .maan-appoint-header-bg3 {
+  --maan-header-bg: var(--maan-ct-header-bg-4);
+}
+.mybazar-maindashboard .maan-state-overview .fs {
+  --maan-ct-title-fs: var(--fs-15);
+}
+.mybazar-maindashboard .maan-layout-style-one {
+  position: relative;
+  --maan-icon-bg: rgba(3, 169, 244, 0.1);
+  --maan-icon-clr: #03A9F4;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr.grid-4 {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr 2rem 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 15px;
+  background: var(--maan-item-bg);
+  -webkit-box-shadow: var(--maan-item-shadow);
+          box-shadow: var(--maan-item-shadow);
+  border-radius: var(--maan-item-radius);
+  position: relative;
+  z-index: 1;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-icon i {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: var(--maan-icon-bg);
+  color: var(--maan-icon-clr);
+  display: inline-block;
+  border-radius: var(--maan-item-radius);
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-desc .maan-counter-title {
+  line-height: 35px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-desc .maan-counter-content {
+  line-height: 20px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-lightblue {
+  --maan-icon-bg: rgba(3, 169, 244, 0.1);
+  --maan-icon-clr: #03A9F4;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-purple {
+  --maan-icon-bg: rgba(151, 47, 255, 0.1);
+  --maan-icon-clr: #972FFF;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-green {
+  --maan-icon-bg: rgba(25, 210, 155, 0.1);
+  --maan-icon-clr: #19D29B;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-pink {
+  --maan-icon-bg: rgba(255, 63, 178, 0.1);
+  --maan-icon-clr: #FF1FA5;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-orange {
+  --maan-icon-bg: rgba(244, 162, 3, 0.1);
+  --maan-icon-clr: #F4A203;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-lime {
+  --maan-icon-bg: rgba(80, 207, 21, 0.1);
+  --maan-icon-clr: #50CF15;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-red {
+  --maan-icon-bg: rgba(255, 53, 65, 0.1);
+  --maan-icon-clr: #FF3541;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-blue {
+  --maan-icon-bg: rgba(0, 117, 255, 0.1);
+  --maan-icon-clr: #0075FF;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr {
+  background: var(--maan-item-bg);
+  -webkit-box-shadow: var(--maan-ct-box-shadow);
+          box-shadow: var(--maan-ct-box-shadow);
+  border-radius: var(--maan-item-radius);
+  margin: 30px 0 0;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header {
+  padding: 15px 30px;
+  background: var(--maan-header-bg);
+  -webkit-box-shadow: var(--maan-ct-box-shadow);
+          box-shadow: var(--maan-ct-box-shadow);
+  border-radius: var(--maan-item-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          height: 55px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .maan-chart-title {
+  text-transform: capitalize;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .card-dropdown .maan-chart-content {
+  background-color: transparent;
+  border-radius: 0;
+  border: solid 1px transparent;
+  text-transform: capitalize;
+  line-height: 21px;
+  height: 20px;
+  z-index: 5;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .card-dropdown .maan-chart-content::after {
+  border-bottom: 2px solid rgba(12, 25, 40, 0.8);
+  border-right: 2px solid rgba(12, 25, 40, 0.8);
+  content: "";
+  display: block;
+  height: 8px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  width: 7px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-note-card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 14px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-note-card-body .maan-note-wpr .maan-content .maan-note {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-note-card-body .maan-note-wpr .maan-button {
+  text-align: right;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-note-card-body .maan-note-wpr .maan-button .maan-btn {
+  background: rgba(3, 169, 244, 0.1);
+  color: #03A9F4;
+  text-transform: capitalize;
+  padding: 14px 20px;
+  border-radius: 7px;
+  margin-right: 5px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-note-card-body .maan-note-wpr .maan-button .maan-btn.other-btn {
+  background: #25d4a9;
+  color: #fff;
+  text-align: right;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header.maan-appoint-header-bg2 {
+  display: block;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body {
+  --maan-icon-bg: rgba(255, 164, 28, 0.1);
+  --maan-icon-clr: background: var(--color-orange);;
+  padding: 10px 20px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .table {
+  margin: 0;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .table tr {
+  border: transparent;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-appoint-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-appoint-image img {
+  width: 55px;
+  height: 55px;
+  border-radius: var(--maan-item-radius);
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-appoint-dg {
+  text-transform: capitalize;
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-chart-title {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-date {
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 10px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-appoint-status span {
+  background: var(--maan-icon-bg);
+  color: var(--maan-icon-clr);
+  border-radius: var(--maan-item-radius);
+  padding: 10px 18px;
+  text-align: center;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-bg-warning-light {
+  --maan-icon-bg: rgba(255, 164, 28, 0.1);
+  --maan-icon-clr: background: var(--color-orange);;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-bg-soft-success {
+  --maan-icon-bg: rgba(37, 212, 169, 0.1);
+  --maan-icon-clr: #25D4A9;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-bg-soft-danger {
+  --maan-icon-bg: rgba(255, 80, 90, 0.1);
+  --maan-icon-clr: #FF505A;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body {
+  padding: 15px 16px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          margin-right: 20px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-check-point-area {
+  width: 180px;
+  height: 180px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li {
+  color: rgba(12, 25, 40, 0.7);
+  margin-bottom: 5px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li i {
+  margin-right: 5px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li:nth-child(1) i {
+  color: #FE4F4F;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li:nth-child(2) i {
+  color: #FFDB1D;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li:nth-child(3) i {
+  color: #2CE78D;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li:nth-child(4) i {
+  color: #3190FF;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #0C1928;
+  opacity: 0.5;
+  margin-left: 20px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wrapper.grid-2 {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: 1fr 2rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+.mybazar-maindashboard .maan-wrapper {
+  position: relative;
+  width: 100%;
+}
+.mybazar-maindashboard .language-select .nice-select {
+  background: none;
+  border: none;
+}
+.mybazar-maindashboard #content {
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.mybazar-maindashboard .container-fluid {
+  padding: 0;
+  margin: 0;
+  display: block !important;
+}
+.mybazar-maindashboard .navbar-nav > li.show .dropdown-menu {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+.mybazar-maindashboard .dropdown-menu li > a {
+  font-size: 13px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 2px;
+  font-weight: 400;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+}
+.mybazar-maindashboard .navbar-nav > .active > a:focus {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.mybazar-maindashboard .navbar-nav li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px !important;
+}
+.mybazar-maindashboard .maan-notifocation-dropdown.nav-item {
+  position: relative;
+}
+.mybazar-maindashboard .maan-notifocation-dropdown.nav-item:hover .maan-notification-dropdown-menu {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 1;
+  visibility: visible;
+}
+.mybazar-maindashboard .maan-notifocation-dropdown.nav-item .maan-notification-dropdown-menu {
+  border: 0;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  visibility: hidden;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  display: block;
+  min-width: 15rem;
+  right: 0;
+  left: auto;
+  opacity: 0;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item {
+  position: relative;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item:hover .maan-mess-dropdown-menu {
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 1;
+  visibility: visible;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item .maan-mess-dropdown-menu {
+  border: 0;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  visibility: hidden;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  display: block;
+  min-width: 15rem;
+  right: 0;
+  left: auto;
+  opacity: 0;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item .maan-mess-dropdown-menu ul li a {
+  padding: 10px !important;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item .pull-left {
+  float: left;
+  margin-right: 5px;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item .mail-contnet {
+  display: inline-block;
+  width: 75%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item .mail-contnet h4 {
+  padding: 0;
+  margin: 0;
+  color: #7792b1;
+  font-size: 15px;
+  position: relative;
+  font-weight: 400;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item .mail-contnet span {
+  margin: 5px 0 0;
+  font-size: 10px;
+  color: #475f7b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: list-item;
+}
+.mybazar-maindashboard .maan-mess-dropdown.nav-item .mail-contnet .small {
+  color: #7792b1;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 1400px) {
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr.grid-4 {
+    -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr.grid-4 {
+    -ms-grid-columns: 1fr !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wrapper.grid-2 {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.mybazar-maindashboard .dashboard-topnew-customer .maan-chart-title {
+  text-align: left;
+}
+.mybazar-maindashboard .dashboard-topnew-customer .maan-note-card-body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px !important;
+}
+.mybazar-maindashboard .dashboard-topnew-customer .dash-customar-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mybazar-maindashboard .dashboard-topnew-customer .dash-customar-author img {
+  height: 45px;
+  width: 45px;
+  min-width: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.mybazar-maindashboard .dashboard-topnew-customer .dash-customar-author p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #03A9F4;
+  opacity: 0.6;
+}
+.mybazar-maindashboard .dashboard-topnew-customer .dash-customar-author h6 {
+  margin: 0;
+  font-size: 14px;
+  color: #0C1928;
+  opacity: 0.7;
+}
+.mybazar-maindashboard .dashboard-topnew-customer .invoice a {
+  display: block;
+  font-size: 14px;
+  color: #03A9F4;
+}
+.mybazar-maindashboard .dashboard-topnew-customer .date p {
+  font-size: 14px;
+  color: #0C1928;
+  opacity: 0.7;
+  text-align: center;
+  margin: 0;
+}
+.mybazar-maindashboard .maan-state-overview .maan-app-radius {
+  text-align: right;
+}
+.mybazar-maindashboard .dashbest-selling-product .maan-card-header {
+  background: rgba(104, 238, 174, 0.15) !important;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-appoint-status span {
+  max-width: 114px;
+  display: block;
+  margin-left: auto;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon {
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+.mybazar-maindashboard .maan-layout-style-one .maan-icon svg{
+  height: 40px;
+  width: 40px;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-icon i {
+  background: none;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-lightdanger {
+  background: rgba(255, 16, 188, 0.1);
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-lightblue {
+  background: rgba(3, 169, 244, 0.1);
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-lightgreen {
+  background: rgba(23, 218, 148, 0.1);
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-icon-clr-lightyellow {
+  background: rgba(255, 208, 52, 0.1);
+}
+.mybazar-maindashboard .maan-chart-color-point-wrp {
+  max-width: 320px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mybazar-maindashboard .maan-chart-color-point-wrp .color-items {
+  text-align: left;
+  position: relative;
+}
+.mybazar-maindashboard .maan-chart-color-point-wrp .color-items.blue::after {
+  background: #3190FF;
+}
+.mybazar-maindashboard .maan-chart-color-point-wrp .color-items.red::after {
+  background: #FE4F4F;
+}
+.mybazar-maindashboard .maan-chart-color-point-wrp .color-items::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: -20px;
+  top: 0;
+  background: #FFDB1D;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+.mybazar-maindashboard .maan-chart-color-point-wrp .color-items p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1;
+}
+.mybazar-maindashboard .maan-chart-color-point-wrp .color-items span {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+
+
+.mybazar-maindashboard tr td{
+  vertical-align: middle;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-appoint-image{
+  max-width: 190px;
+  overflow: hidden;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-chart-title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 130px;
+  text-overflow: ellipsis;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-appoint-card-body .maan-appoint-image img {
+  min-width: 55px;
+}
+.mybazar-maindashboard table tr:first-child td {
+  width: 190px;
+  overflow: hidden;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li p{
+  margin-left: 0;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li{
+  position: relative;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li:after{
+  position: relative;
+    position: absolute;
+    content: "";
+    display: block;
+    left: -20px;
+    top: 5px;
+    background: #FFDB1D;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li.red:after{
+  background: #FE4F4F;
+}
+
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li.blue:after{
+  background: #3190FF;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li.green:after{
+  background: #2CE78D;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr {
+  margin: 25px 0 0;
+}
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wrapper.grid-2 {
+  grid-gap: 25px;
+}
+@media (min-width: 1000px) and (max-width: 1700px) {
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-icon i {
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+  }
+
+  .mybazar-maindashboard .card-dropdown input {
+    font-size: 13px !important;
+    width: 155px !important;
+}
+
+.mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .card-dropdown .maan-chart-content{
+  font-size: 13px !important;
+}
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-desc .maan-counter span{
+    font-size: 22px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-desc .maan-counter-content {
+    font-size: 16px;
+    margin: 0;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box {
+    border-radius: 18px;
+  }
+  .side-bar {
+    width: 250px;
+  }
+  .side-bar .side-bar-manu ul li a {
+    width: calc(100% - 10px);
+  }
+  main {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-check-point-area {
+    width: 130px;
+    height: 130px;
+  }
+  .mybazar-maindashboard .card-dropdown input{
+    font-size: 13px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .maan-chart-title{
+    font-size: 13px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point {
+    align-items: center;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .card-dropdown .maan-chart-content .current{
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box{
+    padding: 8px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-icon{
+    min-width: 50px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-icon i img{
+    width: 40px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-icon i {
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+    line-height: 50px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-icon svg {
+    height: 30px;
+    width: 30px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-desc .maan-counter span {
+    font-size: 16px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-desc .maan-counter-content {
+    font-size: 10px;
+    margin: 0;
+  }
+}
+@media(max-width: 991px){
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr{
+   gap: 25px 0;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr.grid-4{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .maan-chart-title{
+    font-size: 13px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point {
+    align-items: center;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wpr .maan-card-header .card-dropdown .maan-chart-content .current{
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 767px){
+  .mybazar-maindashboard .maan-layout-style-one .maan-content-wrapper.grid-2{
+    display: block;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr.grid-4{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+/*# sourceMappingURL=main.css.map */
+
+
+
+.mybazar-maindashboard #content{
+  width: 100%;
+}
+.mybazar-maindashboard  select{
+  height: auto !important;
+}
+.mybazar-maindashboard .card-dropdown input{
+  background: none;
+  border: none;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 18px;
+  width: 183px;
+}
+.maan-layout-style-one .maan-content-wpr .maan-pie-card-body .maan-chart-point .maan-chart-point-list li span{
+  height: auto;
+  width: auto;
+  display: block;
+  background: none !important;
+  margin: 0;
+}
+
+
+/* new css start backend 31/01/2022 */
+input[type="month"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+  background: none;
+}
+.mybazar-maindashboard .card-dropdown input {
+  width: 200px;
+}
+@media (min-width: 1200px) and (max-width: 1360px) {
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box{
+    padding: 10px;
+  }
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-icon i {
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    line-height: 60px;
+}
+  .mybazar-maindashboard .maan-layout-style-one .maan-counter-wpr .maan-counter-box .maan-desc .maan-counter span {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1700px) {
+  .mybazar-maindashboard .card-dropdown input {
+    width: 166px !important;
+}
+}
+
+input[type="month"] {
+  position: relative;
+  padding: 10px;
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+
+input[type="month"]:before {
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: Font Awesome\ 5 Free;
+  font-weight: 900;
+  content: "\f073";
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  color: #999;
+}
+/* new css end backend 31/01/2022 */

@@ -1,0 +1,16 @@
+{
+    "name": "Finance",
+    "alias": "finance",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\Finance\\Providers\\FinanceServiceProvider"
+    ],
+    "files": [],
+    "requires": [],
+    "minimumCoreVersion": "",
+    "title": "Finance",
+    "version": 1.0,
+    "authors": ["maan theme"]
+}

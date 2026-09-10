@@ -1,0 +1,13 @@
+{
+    "name": "CustomerManagement",
+    "alias": "customer_management",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Backend\\CustomerManagement\\Providers\\CustomerManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
