@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "super-admin",
+        "email": "superadmin@poros.com",
+        "phone": "",
+        "password": "$2y$10$h8B644ILvZjJMn1he78xMu9grKaebsCssQ7X2Mt78S5oC0tRfOyv6",
+        "verification_code": null,
+        "verification_expire_at": null,
+        "avatar": "OHvMDRdoEbH5EuLyuh4r7JHXAHuqRuNAQziqN47s.png",
+        "remember_token": "2C1QDp1zpBFtgMLlyH5pm6cGTijeP1p1sFHv1CbgwGU5NNxumvkljHOZlg8H",
+        "is_active": 1,
+        "created_at": "2021-06-04 09:47:34",
+        "updated_at": "2026-03-15 13:03:34",
+        "deleted_at": null
+    },
+    {
+        "id": 2,
+        "name": "Admin",
+        "email": "admin@poros.com",
+        "phone": "01xxxxxxx",
+        "password": "$2y$10$H4gN7HWC5.1gOilDBASUBu4CQvRtbdy1jlj7xY84u6yHPkGLnJGya",
+        "verification_code": null,
+        "verification_expire_at": null,
+        "avatar": "ZmIJrzRDv8SzkUSNxw3K3NmVlMcfcxyUHvXS7pEg.png",
+        "remember_token": "BFpMOvQMDSZFtPvYZLm0aThFT0TeibLqyHxaETImDhjDqsEkF0zeWLkM9CpM",
+        "is_active": 1,
+        "created_at": "2021-06-04 09:47:34",
+        "updated_at": "2024-01-14 23:37:35",
+        "deleted_at": null
+    }
+]

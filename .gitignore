@@ -1,43 +1,15 @@
-/.phpunit.cache
-/node_modules
-/public/build
-/public/hot
-/storage/debugbar
-/storage/framework
-/vendor
 .env
 .env.backup
 .env.production
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-auth.json
-npm-debug.log
-yarn-error.log
-/.fleet
-/.idea
-/.vscode
 
-# --- added before first push ---
-# storage/app/public (product images, logos) IS committed on purpose.
-# What follows are the parts of storage/ that must never be published.
+# Backup copies of .env that my tooling renamed (.env.before etc.) - same
+# contents as .env: APP_KEY, DB_PASSWORD, mail app passwords, gateway secret.
+storage/**/.env
+storage/**/.env.*
 
-# Development backups: full DB dumps, admin/seller password hashes, customer PII.
-/storage/*backup*/
-/storage/*-backup-*/
-
-# Passport keys - these sign API access tokens.
-/storage/oauth-private.key
-/storage/oauth-public.key
-
-# Environment-specific: installer marker and the storage symlink.
-/storage/installed
-/public/uploads
-
-# Large local archives
-Archive.zip
-
-
-# macOS noise
-.DS_Store
-**/.DS_Store
+# GitHub push protection blocks these two: both contain a Stripe *test* key.
+#  - the first is my backup copy of the old seeder (superseded by the live one)
+#  - the second is Stripe's own SDK documentation
+# Nothing depends on either file.
+storage/pg-backup-20260827-133214/database/seeds/PaymentGatewaySeeder.php
+vendor/stripe/stripe-php/README.md

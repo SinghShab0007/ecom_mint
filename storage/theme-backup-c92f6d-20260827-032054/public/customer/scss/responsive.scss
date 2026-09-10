@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+ 
+
+
+/*================================================
+[  Table of contents  ]
+================================================
+
+    1 Theme Default
+
+    2 Top Bar
+
+    3 Mid Bar
+
+    4 User Dashbord
+
+    5 Side Bar User
+
+    6 Order
+
+    7 Announce
+
+    8 Faq
+
+    9 Invoice
+
+    10 Footer
+
+======================================
+[ End table content ]
+======================================*/
+
+ :root {
+    --color-white: #FFFFFF;
+    --color-white2: #F1F1F1;
+    --color-white3: #E2E2E2;
+    --color-white4: #F8F8F8;
+    --color-black: #191919;
+    --color-gBlack: #6D6D73;
+    --color-border: #CCCCCC;
+    --color-orange: #c92f6d;
+    --color-lBlue: #D7F5FF;
+    --color-tr: transparent;
+}
+
+//Color
+$color-white: var(--color-white);
+$color-white2: var(--color-white2);
+$color-white3: var(--color-white3);
+$color-white4: var(--color-white4);
+$color-black: var(--color-black);
+$color-gBlack: var(--color-gBlack);
+$color-border: var(--color-border);
+$color-orange: var(--color-orange);
+$color-lBlue: var(--color-lBlue);
+$color-tr: var(--color-tr);
+//Prefix Mixin
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    transform: $property;
+}
+
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    transition: $property;
+}
+
+@mixin transition-delay($property) {
+    -webkit-transition-delay: $property;
+    -moz-transition-delay: $property;
+    transition-delay: $property;
+}
+
+@mixin animation($property) {
+    -webkit-animation: $property;
+    -moz-animation: $property;
+    animation: $property;
+}
+
+@mixin box-shadow($property) {
+    -webkit-box-shadow: $property;
+    -moz-box-shadow: $property;
+    box-shadow: $property;
+}
+
+@media(max-width:1400px) {
+    /*=====================
+        6 Order
+    =======================*/
+    .user-dashbord {
+        .order-manu .nav-link {
+            width: calc(24% - 12px);
+            margin: 0px 12px 25px 12px;
+        }
+        .content-table {
+            overflow: hidden;
+            overflow-x: auto;
+            .table {
+                display: block;
+            }
+        }
+        .order-content .search-name {
+            margin-bottom: 25px;
+        }
+    }
+    /*=====================
+        10 Footer
+    =======================*/
+    footer .info-footer {
+        padding-top: 70px;
+        h6~ul li a {
+            font-size: 12px;
+            &:hover {
+                padding-left: 22px;
+            }
+        }
+    }
+}
+
+@media(max-width:1199px) {
+    /*=====================
+        1 Theme Default
+    =======================*/
+    section.user-dashbord {
+        padding: 50px 0px;
+    }
+    .pagination-bar {
+        margin-top: 30px;
+    }
+    /*=====================
+        6 Order
+    =======================*/
+    .user-dashbord {
+        .order-manu .nav-link {
+            width: calc(50% - 12px);
+            &:nth-last-of-type(1n) {
+                margin: 0px 12px 25px 0px;
+            }
+            &:nth-of-type(2n) {
+                margin: 0px 0px 25px 12px;
+            }
+        }
+    }
+    /*=====================
+         7 Announce
+    =======================*/
+    .announce .card .post-text {
+        padding: 15px 0px;
+    }
+    /*=====================
+         9 Invoice
+    =======================*/
+    .invoice {
+        .step-pro ul {
+            text-align: center;
+            li {
+                margin-right: calc(6% - 8px - -12px);
+                &::before {
+                    width: calc(100% + 12px);
+                }
+            }
+        }
+        .card.timeline-item {
+            margin-bottom: 0px !important;
+        }
+    }
+}
+
+@media(max-width:991px) {
+    /*=====================
+        1 Theme Default
+    =======================*/
+    footer .main-footer .back-to-top {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+    /*=====================
+        2 Top Bar
+    =======================*/
+    .top-bar {
+        &.sticky {
+            margin-bottom: 58px;
+        }
+        .top-bar-left li,
+        .top-bar-right>ul>li {
+            padding: 8px 14px;
+        }
+        .top-bar-left {
+            li a {
+                span.icon svg {
+                    --svg-font-size: 13px;
+                }
+                span.text {
+                    font-size: 13px;
+                }
+            }
+        }
+        .top-bar-right .currency-manu {
+            .flag {
+                width: 14px;
+                height: 14px;
+                top: 2px;
+                line-height: 0;
+            }
+            .flag-title {
+                font-size: 13px;
+            }
+        }
+    }
+    /*=====================
+        3 Mid Bar
+    =======================*/
+    .mid-bar {
+        padding: 15px 0px;
+        border-bottom: 1px solid $color-border;
+        .logo a {
+            max-width: 110px;
+        }
+        .mair-right {
+            padding-right: 50px;
+            li .popup-search>button svg,
+            li a .icon svg,
+            li button .icon svg {
+                --svg-font-size: 15px;
+            }
+        }
+        .mair-right>ul>li {
+            margin-right: 13px;
+        }
+        .mair-right .menu-btn {
+            position: absolute;
+            display: inline-block;
+        }
+        .popup-search {
+            display: block !important;
+        }
+    }
+    .manu-bar {
+        display: none;
+    }
+    /*=====================
+        4 User Dashbord
+    =======================*/
+    .user-dashbord {
+        .close-btn {
+            display: inline-block !important;
+        }
+        .side-bar-user {
+            position: fixed;
+            width: 350px;
+            top: 0;
+            left: -100%;
+            z-index: 8;
+            @include transition(all 0.4s ease);
+            &.active {
+                left: 0px;
+            }
+            .overlay {
+                display: block;
+                width: calc(100% - 350px);
+                left: -100%;
+                @include transition(all 0.4s ease);
+                &.active {
+                    opacity: 0.3;
+                    visibility: visible;
+                    left: 350px;
+                }
+            }
+            ul {
+                margin-top: 30px;
+            }
+        }
+    }
+    /*=====================
+        12 Footer
+    =======================*/
+    footer {
+        .info-footer {
+            padding: 50px;
+            a {
+                &::before,
+                &::after {
+                    content: none !important;
+                }
+                &:hover {
+                    padding-left: 0px !important;
+                }
+            }
+            .footer-right {
+                text-align: center;
+                margin-top: 30px;
+                h6::before {
+                    left: 50%;
+                    @include transform(translateX(-50%));
+                }
+            }
+            .payment-gateway .row {
+                width: 300px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    /*=====================
+        2 Top Bar
+    =======================*/
+    .top-bar .top-bar-left li:last-child {
+        display: none;
+    }
+    /*=====================
+        12 Footer
+    =======================*/
+    footer {
+        .info-footer {
+            .footer-left,
+            ul {
+                text-align: center;
+            }
+            h6 {
+                text-align: center;
+                margin: 30px 0px 20px 0px;
+                &::before {
+                    left: 50%;
+                    @include transform(translateX(-50%));
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:575px) {
+    /*=====================
+        2 Top Bar
+    =======================*/
+    .top-bar {
+        padding: 10px 0px;
+        .top-bar-left,
+        .top-bar-right ul {
+            text-align: center;
+            li {
+                border: none;
+            }
+        }
+    }
+    /*=====================
+        4 User Dashbord
+    =======================*/
+    .user-dashbord .side-bar-user {
+        width: 100%;
+        .overlay {
+            display: none !important;
+        }
+    }
+    footer .info-footer .footer-left li a {
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+}
+
+@media(max-width:454px) {
+    .manu-bar {
+        width: 100%;
+        .overlay.active {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .mair-right li {
+            &:nth-child(1),
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+    footer {
+        .info-footer .footer-left li a {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+        }
+        .main-footer .left-link,
+        .main-footer .right-text {
+            text-align: center;
+        }
+        .main-footer .right-text {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media(max-width:454px) {
+    .mid-bar .mair-right>ul>li:nth-child(1),
+    .mid-bar .mair-right>ul>li:nth-child(2) {
+        display: none;
+    }
+}

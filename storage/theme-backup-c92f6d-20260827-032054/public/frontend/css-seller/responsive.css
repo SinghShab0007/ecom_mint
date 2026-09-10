@@ -1,0 +1,912 @@
+/*
+Theme Name: POROSKART Ecommerce HTML5 Template
+Developed by: Abdullah Al Numan 
+Version: 2.0
+License: 
+Tags: 
+*/
+/*================================================
+[  Table of contents  ]
+================================================
+
+    1 Theme Default
+
+    2 Top Bar
+
+    3 Mid Bar
+
+    4 Manu Bar
+
+    5 Banner
+
+    6 Service
+
+    7 Discount 
+
+    8 Product Tab
+
+    9 Offer Count
+
+    10  Shop List
+
+    11 Shop Details
+
+    12 Footer
+
+======================================
+[ End table content ]
+======================================*/
+:root {
+  --color-white: #FFFFFF;
+  --color-white2: #F1F1F1;
+  --color-white3: #E2E2E2;
+  --color-white4: #F8F8F8;
+  --color-black: #191919;
+  --color-gBlack: #6D6D73;
+  --color-border: #CCCCCC;
+  --color-orange: #c92f6d;
+  --color-red: #E81113;
+  --color-lBlue: #D7F5FF;
+  --color-tr: transparent;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1360px) {
+  .banner .swiper-slide h2 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  .ad-poster .ad-post-text h2 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /*=====================
+      1 Theme Default
+  =======================*/
+  .banner .swiper-slide h2 {
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  section {
+    padding: 70px 0px;
+  }
+
+  .manu-bar .category-manu button {
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .category-list a,
+.side-mega-manu a {
+    padding: 15px;
+    font-size: 12px;
+  }
+  .category-list a .arrow,
+.side-mega-manu a .arrow {
+    top: 16px;
+    right: 13px;
+  }
+
+  .banner {
+    margin-bottom: 50px;
+  }
+  .banner .banner-bg {
+    min-height: 560px !important;
+    margin: 0px !important;
+  }
+
+  .offer-count .offer-text h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  footer .info-footer {
+    padding-top: 70px;
+  }
+  footer .info-footer h6 ~ ul li a {
+    font-size: 12px;
+  }
+  footer .info-footer h6 ~ ul li a:hover {
+    padding-left: 22px;
+  }
+
+  .maan-modal-content .modal-body {
+    padding: 40px 30px;
+  }
+
+  .maan-modal-content .maan-modal-wrapper h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .maan-modal-content .maan-modal-wrapper h3 {
+    font-size: 25px;
+    margin-bottom: 0px;
+  }
+
+  .category-list a .icon svg, .side-mega-manu a .icon svg {
+    margin-right: 5px;
+    --svg-font-size: 12px;
+  }
+
+  .category-list a, .side-mega-manu a {
+    padding: 14px;
+  }
+
+  .category-list a .arrow, .side-mega-manu a .arrow {
+    right: 0px;
+  }
+
+  .banner .swiper-slide {
+    min-height: 460px;
+  }
+
+  .categories .cat-items .item a {
+    padding: 10px 15px;
+  }
+
+  .ad-poster .ad-post-text h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .maan-modal-content .modal-body {
+    padding: 40px 30px;
+  }
+
+  .maan-modal-content .maan-modal-wrapper h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .maan-modal-content .maan-modal-wrapper h3 {
+    font-size: 25px;
+    margin-bottom: 0px;
+  }
+
+  .billing-details .right-form .payment-cart {
+    margin-bottom: -8px;
+  }
+
+  /*=====================
+      1 Theme Default
+  =======================*/
+  section {
+    padding: 50px 0px;
+  }
+
+  a.link-anime,
+button.btn-anime {
+    padding: 10px 20px;
+  }
+
+  .banner-content {
+    max-width: 350px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px !important;
+  }
+
+  .banner .swiper-slide h2 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .banner .swiper-slide {
+    position: relative;
+  }
+  .banner .swiper-slide::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    left: 0;
+    top: 0;
+  }
+
+  .maan-happy-shopping {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .product-card .product-img .tag {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .card-table > .container {
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  .card-table > .container .table {
+    display: block;
+  }
+
+  footer .main-footer .back-to-top {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  /*=====================
+      2 Top Bar
+  =======================*/
+  .top-bar.sticky {
+    margin-bottom: 58px;
+  }
+  .top-bar .top-bar-left li,
+.top-bar .top-bar-right > ul > li {
+    padding: 8px 14px;
+  }
+  .top-bar .top-bar-left li a span.icon svg {
+    --svg-font-size: 13px;
+  }
+  .top-bar .top-bar-left li a span.text {
+    font-size: 13px;
+  }
+  .top-bar .top-bar-right .currency-manu .flag {
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    line-height: 0;
+  }
+  .top-bar .top-bar-right .currency-manu .flag-title {
+    font-size: 13px;
+  }
+
+  /*=====================
+      3 Mid Bar
+  =======================*/
+  .mid-bar {
+    padding: 15px 0px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .mid-bar .logo a {
+    max-width: 110px;
+  }
+  .mid-bar .mair-right {
+    padding-right: 50px;
+  }
+  .mid-bar .mair-right li .popup-search > button svg,
+.mid-bar .mair-right li a .icon svg,
+.mid-bar .mair-right li button .icon svg {
+    --svg-font-size: 15px;
+  }
+  .mid-bar .mair-right > ul > li {
+    margin-right: 13px;
+  }
+  .mid-bar .mair-right .menu-btn {
+    position: absolute;
+    display: inline-block;
+  }
+
+  /*=====================
+      4 Manu Bar
+  =======================*/
+  .manu-bar {
+    position: fixed;
+    padding: 50px 0px 30px 0px;
+    width: 350px;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    background: var(--color-black);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .manu-bar.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .manu-bar .col-lg-3 {
+    display: none;
+  }
+  .manu-bar .main-manu {
+    position: relative;
+  }
+  .manu-bar .main-manu .close-btn {
+    display: inline-block;
+  }
+  .manu-bar .main-manu ul {
+    text-align: center;
+  }
+  .manu-bar .main-manu li {
+    display: block;
+    border-top: 1px solid var(--color-gBlack);
+    border-bottom: none !important;
+    margin: 0px;
+  }
+  .manu-bar .main-manu li:last-child {
+    border-bottom: 1px solid var(--color-gBlack);
+  }
+  .manu-bar .main-manu li a {
+    display: block;
+    font-size: 12px;
+    padding: 10px 0px;
+  }
+  .manu-bar .main-manu li a:hover {
+    color: var(--color-orange) !important;
+  }
+  .manu-bar .main-manu li:hover > a {
+    padding: 10px 0px !important;
+    color: var(--color-white);
+  }
+  .manu-bar .main-manu li ul {
+    margin-top: 0px;
+    padding: 0px;
+    position: unset;
+    opacity: unset;
+    text-align: unset;
+    visibility: unset;
+    background: var(--color-tr);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .manu-bar .main-manu li ul a {
+    color: var(--color-white) !important;
+  }
+  .manu-bar .main-manu li ul a::before, .manu-bar .main-manu li ul a::after {
+    content: none !important;
+  }
+  .manu-bar .main-manu li ul a:hover {
+    padding-left: 0px !important;
+  }
+  .manu-bar .overlay {
+    display: block;
+    width: calc(100% - 350px);
+    left: -100%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .manu-bar .overlay.active {
+    opacity: 0.3;
+    left: 350px;
+  }
+
+  /*=====================
+      5 Banner
+  =======================*/
+  .banner .banner-add {
+    display: none;
+  }
+
+  .banner {
+    margin: 50px;
+  }
+  .banner .swiper-slide {
+    min-height: 390px;
+  }
+  .banner .swiper-slide a {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .banner .swiper-slide .discount-tag {
+    padding: 8px 20px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  /*=====================
+      6 Service
+  =======================*/
+  .service .service-card {
+    margin-bottom: 50px;
+  }
+  .service .row > div:nth-last-child(1) .service-card,
+.service .row > div:nth-last-child(2) .service-card {
+    margin-bottom: 0px;
+  }
+
+  /*=====================
+      7 Discount
+  =======================*/
+  .discount .dis-card .discount-img {
+    padding: 20px;
+  }
+  .discount .dis-card .discount-img img {
+    height: 100px;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-bottom: 30px;
+  }
+  .discount .dis-card .profile-img img {
+    height: 300px;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  /*=====================
+      8 Product Tab
+  =======================*/
+  .product-tab .nav-tabs .nav-link {
+    padding: 20px;
+  }
+  .product-tab .product-card {
+    margin-bottom: 30px !important;
+  }
+  .product-tab .row > div:nth-last-child(1) .product-card,
+.product-tab .row > div:nth-last-child(2) .product-card {
+    margin-bottom: 0px !important;
+  }
+
+  .similar-product .product-card.v2 {
+    margin-bottom: 30px !important;
+  }
+  .similar-product .row > div:nth-last-child(1) .product-card,
+.similar-product .row > div:nth-last-child(2) .product-card {
+    margin-bottom: 0px !important;
+  }
+
+  /*=====================
+      9 Offer Count
+  =======================*/
+  .offer-count {
+    padding: 50px 0px;
+  }
+  .offer-count .offer-profile {
+    display: none;
+  }
+  .offer-count .offer-text {
+    text-align: center;
+  }
+  .offer-count .offer-text h2,
+.offer-count .offer-text h5 {
+    color: var(--color-white);
+  }
+  .offer-count .offer-text h2 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .offer-count .offer-text h5 {
+    margin-bottom: 20px;
+  }
+  .offer-count .offer-text .offer-wrap .countdown-item {
+    margin: 30px 15px 30px 0px;
+  }
+
+  .ad-poster {
+    text-align: center;
+  }
+  .ad-poster h2 {
+    margin-bottom: 24px;
+  }
+
+  /*=====================
+      10  Shop List
+  =======================*/
+  .shop-list .search-bar,
+.shop-list .main-search,
+.shop-list .product-card {
+    margin-bottom: 30px;
+  }
+  .shop-list .auto-margin-3 > div:nth-last-child(1) .product-card,
+.shop-list .auto-margin-3 > div:nth-last-child(2) .product-card,
+.shop-list .auto-margin-3 > div:nth-last-child(3) .product-card {
+    margin-bottom: 0px !important;
+  }
+  .shop-list .page-navigation {
+    margin-top: 30px;
+  }
+
+  /*=====================
+      11 Shop Details
+  =======================*/
+  .shop-details .product-small-img {
+    margin-top: 30px;
+  }
+  .shop-details .product-small-img .main-img {
+    margin: 0px 10px;
+  }
+  .shop-details .product-item-details {
+    text-align: center;
+  }
+
+  .side-mega-manu {
+    display: none;
+  }
+
+  /*=====================
+      12 Footer
+  =======================*/
+  footer .info-footer {
+    padding: 50px;
+  }
+  footer .info-footer a::before, footer .info-footer a::after {
+    content: none !important;
+  }
+  footer .info-footer a:hover {
+    padding-left: 0px !important;
+  }
+  footer .info-footer .footer-right {
+    text-align: center;
+    margin-top: 30px;
+  }
+  footer .info-footer .footer-right h6::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  footer .info-footer .payment-gateway .row {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .flipTimer .digit > div.shadow-bottom {
+    width: 40px;
+  }
+
+  .maan-author-profile {
+    padding: 30px 10px;
+    background: #F6F6F6;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .maan-info-header {
+    padding: 15px 15px;
+  }
+  .maan-info-header h4 {
+    font-size: 16px;
+  }
+
+  .maan-personal-information .maan-user-details ul li span {
+    width: 50%;
+  }
+
+  .maan-personal-information .maan-user-details {
+    padding: 0 15px;
+  }
+
+  .flipTimer .digit-set {
+    width: 40px;
+  }
+
+  .flipTimer {
+    line-height: 45px;
+    height: 50px;
+    font-size: 40px;
+  }
+
+  .flipTimer .digit > div.shadow-top {
+    width: 42px;
+  }
+
+  .coming-soon-content h4 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+
+  .coming-soon-content h2 {
+    font-size: 30px;
+  }
+
+  .maan-error-wrapper .error-content h2 {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .maan-error-wrapper .error-content p {
+    font-size: 20px;
+  }
+
+  .maan-error-wrapper .error-content {
+    top: 0;
+  }
+
+  .maan-maintenance-wrapper h4 {
+    font-size: 25px;
+  }
+
+  .maan-modal-content .maan-modal-wrapper .thumb img {
+    width: 80px;
+  }
+
+  .maan-modal-content .maan-modal-wrapper h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .maan-modal-content .maan-modal-wrapper h3 {
+    font-size: 16px;
+    margin-bottom: 0px;
+    line-height: 25px;
+  }
+
+  .maan-modal-content .btn-close {
+    top: 15px;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+  }
+
+  /*=====================
+      2 Top Bar
+  =======================*/
+  .top-bar .top-bar-left li:last-child {
+    display: none;
+  }
+
+  /*=====================
+      7 Discount
+  =======================*/
+  .discount .dis-card .profile-img img {
+    height: unset;
+  }
+  .discount .dis-card .discount-img img {
+    height: 200px;
+  }
+
+  /*=====================
+      8 Product Tab
+  =======================*/
+  .product-tab .nav-tabs .nav-link {
+    padding: 20px 15px;
+  }
+
+  .discount .dis-card,
+.product-card {
+    margin-bottom: 30px !important;
+  }
+
+  .auto-margin-4 > div:nth-last-child(1) .dis-card,
+.auto-margin-3 > div:nth-last-child(1) .product-card,
+.auto-margin-3 > div:nth-last-child(2) .product-card {
+    margin-bottom: 0px !important;
+  }
+
+  /*=====================
+      12 Footer
+  =======================*/
+  footer .info-footer .footer-left,
+footer .info-footer ul {
+    text-align: center;
+  }
+  footer .info-footer h6 {
+    text-align: center;
+    margin: 30px 0px 20px 0px;
+  }
+  footer .info-footer h6::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 575px) {
+  .maan-modal-content .modal-body {
+    padding: 40px 15px;
+  }
+
+  .maan-modal-content .modal-body.faild-body {
+    padding: 40px 15px;
+  }
+
+  .faild-card-thumb img {
+    width: 150px;
+  }
+
+  .coming-soon-content .flipTimer .text-wrp {
+    width: 30%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .coming-soon-content .flipTimer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .coming-soon-content .flipTimer .text {
+    right: auto;
+    left: 50%;
+  }
+
+  .coming-soon-content h2 {
+    margin-top: 140px;
+  }
+
+  .maan-error-wrapper .error-content h2 {
+    font-size: 30px;
+  }
+
+  .maan-error-wrapper .error-content p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .maan-maintenance-wrapper h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .maan-maintenance-wrapper p {
+    font-size: 16px;
+  }
+
+  /*=====================
+      1 Theme Default
+  =======================*/
+  .main-title {
+    text-align: center;
+  }
+
+  .right-link {
+    margin-top: 20px;
+    text-align: center !important;
+  }
+
+  /*=====================
+      2 Top Bar
+  =======================*/
+  .top-bar {
+    padding: 10px 0px;
+    display: none;
+  }
+  .top-bar .top-bar-left,
+.top-bar .top-bar-right ul {
+    text-align: center;
+  }
+  .top-bar .top-bar-left li,
+.top-bar .top-bar-right ul li {
+    border: none;
+  }
+
+  .banner .swiper-slide h2 {
+    font-size: 25px;
+  }
+
+  .banner .swiper-slide {
+    min-height: 350px;
+  }
+
+  .banner {
+    margin: 0;
+    background: none;
+  }
+
+  .ad-poster .ad-post-text h2 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .ad-poster .ad-post-text h2 sup {
+    font-size: 29px;
+    line-height: 45px;
+    font-weight: 400;
+    top: -22px;
+  }
+
+  .service .row > div:nth-last-child(2) .service-card,
+.product-tab .row > div:nth-last-child(2) .product-card,
+.auto-margin-3 > div:nth-last-child(2) .product-card,
+.shop-list .auto-margin-3 > div:nth-last-child(2) .product-card,
+.shop-list .auto-margin-3 > div:nth-last-child(3) .product-card,
+.similar-product .row > div:nth-last-child(2) .product-card {
+    margin-bottom: 30px !important;
+  }
+
+  .manu-bar {
+    width: 100%;
+  }
+  .manu-bar .overlay.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .manu-bar .mair-right li:nth-child(1), .manu-bar .mair-right li:nth-child(2) {
+    display: none;
+  }
+
+  footer .info-footer .footer-left li a {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
+
+  .popup-search {
+    display: none;
+  }
+
+  footer .info-footer {
+    padding: 50px 10px;
+  }
+
+  footer .main-footer .left-link {
+    text-align: center;
+  }
+
+  footer .main-footer .right-text {
+    text-align: center;
+  }
+
+  .offer-count .offer-text h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .offer-count .offer-text .offer-wrap {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 400px) {
+  .mid-bar .mair-right {
+    padding-right: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .mid-bar .mair-right > ul > li {
+    margin-right: 0px;
+  }
+
+  .content-body {
+    margin: 15px;
+  }
+
+  .login-form h4, .login-form .input-group {
+    font-size: 20px;
+  }
+
+  .login-form {
+    padding: 30px 15px;
+  }
+
+  .login-form .input-group.con-check {
+    font-size: 16px;
+  }
+
+  .shop-details .tab-info {
+    padding: 0;
+  }
+
+  .shop-details .product-item-details .product-title h4 {
+    font-size: 20px;
+  }
+
+  .shop-details .product-item-details .price h4 {
+    font-size: 20px;
+  }
+
+  .shop-details .product-item-details .price {
+    margin-bottom: 10px;
+  }
+
+  .shop-details .tab-info .nav-tabs .nav-link {
+    padding: 12px;
+  }
+}
+@media (max-width: 360px) {
+  .maan-error-wrapper .error-content h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .shop-details .product-item-details .product-quantity .quantity input.input-number {
+    width: 160px;
+  }
+
+  section .main-title h4 {
+    font-size: 20px;
+  }
+}
