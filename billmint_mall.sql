@@ -1413,7 +1413,7 @@ CREATE TABLE `payment_gateways` (
 
 LOCK TABLES `payment_gateways` WRITE;
 /*!40000 ALTER TABLE `payment_gateways` DISABLE KEYS */;
-INSERT INTO `payment_gateways` VALUES (1,'Paypal','{\"CLIENT_ID\":null,\"CLIENT_SECRET\":null,\"MODE\":\"sandbox\"}',0,'2022-03-01 05:00:00','2026-03-15 08:42:28'),(2,'Stripe','{\"KEY\":null,\"SECRET\":null}',0,'2022-03-01 05:00:07','2026-03-15 08:42:37'),(3,'Razorpay','{\"KEY_ID\":null,\"KEY_SECRET\":null}',0,'2022-04-05 10:00:07','2026-03-15 08:42:03'),(4,'Paydhara','{\"api_key\":\"REPLACED_SEE_ENV\",\"secret_key\":\"REPLACED_SEE_ENV\",\"base_url\":\"https:\\/\\/api.paydhara.com\\/api\\/v1\"}',1,'2026-03-15 08:10:08','2026-03-18 07:23:51');
+INSERT INTO `payment_gateways` VALUES (1,'Paypal','{\"CLIENT_ID\":null,\"CLIENT_SECRET\":null,\"MODE\":\"sandbox\"}',0,'2022-03-01 05:00:00','2026-03-15 08:42:28'),(2,'Stripe','{\"KEY\":null,\"SECRET\":null}',0,'2022-03-01 05:00:07','2026-03-15 08:42:37'),(3,'Razorpay','{\"KEY_ID\":null,\"KEY_SECRET\":null}',0,'2022-04-05 10:00:07','2026-03-15 08:42:03'),(4,'Paydhara','{\"api_key\":\"FIN5488743e6731abc8964dc4\",\"secret_key\":\"de24a5e0f872ba4a759079f07583f227\",\"base_url\":\"https:\\/\\/api.paydhara.com\\/api\\/v1\"}',1,'2026-03-15 08:10:08','2026-03-18 07:23:51');
 /*!40000 ALTER TABLE `payment_gateways` ENABLE KEYS */;
 UNLOCK TABLES;
 
