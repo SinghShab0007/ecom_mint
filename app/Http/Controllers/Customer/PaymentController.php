@@ -30,6 +30,25 @@ class PaymentController extends Controller
     /** Value stored in orders.payment_by for the online gateway. */
     public const GATEWAY = 'Paydhara';
 
+    /**
+     * Customer-facing label for a stored payment_by value.
+     *
+     * orders.payment_by holds the internal gateway name, which should never be
+     * shown to a buyer - the checkout calls it "Pay Online", so receipts and
+     * emails must say the same thing.
+     */
+    public static function paymentLabel(?string $paymentBy): string
+    {
+        switch ($paymentBy) {
+            case self::GATEWAY:
+                return __('Pay Online');
+            case 'COD':
+                return __('Cash On Delivery');
+            default:
+                return (string) $paymentBy;
+        }
+    }
+
     public function __construct()
     {
         $this->middleware('auth:customer')->except(['paydharaWebhook', 'paydharaReturn']);
@@ -324,7 +343,7 @@ class PaymentController extends Controller
             'shippingCost'   => $shipping,
             'couponDiscount' => $discount,
             'grandTotal'     => $subTotal + $shipping - $discount,
-            'paymentBy'      => $order->payment_by,
+            'paymentBy'      => self::paymentLabel($order->payment_by),
             'paymentStatus'  => $order->payment_status,
             'mobile'         => $order->shipping_mobile ?: $order->user_mobile,
             'email'          => $recipient,

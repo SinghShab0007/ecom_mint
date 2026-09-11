@@ -39,7 +39,7 @@
                     </td>
                     <td>{{ $order->product->details->inside_shipping_days ?? '7-30 days' }}</td>
                     <td>{{ $order->qty }}</td>
-                    <td>{{ $order->order->payment_by ?? '-' }}</td>
+                    <td>{{ $order->order ? \App\Http\Controllers\Customer\PaymentController::paymentLabel($order->order->payment_by) : '-' }}</td>
                     <td>{{ $order->courier ?: '-' }}</td>
                     <td>
                         <span class="pk-chip {{ orderButtonClass($order->order_stat) }}">{{ orderStatus($order->order_stat) }}</span>
