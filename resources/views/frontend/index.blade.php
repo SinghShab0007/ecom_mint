@@ -22,7 +22,9 @@
 
     @include('frontend._products')
 
-    @include('frontend._service')
+    {{-- Service strip (Free Shipping / Gift Card / Return & Refund / Quality Support)
+         removed. Re-add this include to bring it back. --}}
+    {{-- @include('frontend._service') --}}
 
      @include('frontend._brand-logo')
 

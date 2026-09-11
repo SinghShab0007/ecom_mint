@@ -93,17 +93,11 @@ class PaymentController extends Controller
         Cookie::queue(Cookie::forget('coupon_discount'));
 
         if ($request->payment_method === self::GATEWAY) {
-            // Online payment: the order exists only to carry a reference to the
-            // gateway. It stays unpaid, and no confirmation goes out until the
-            // gateway tells us the money arrived.
             return response()->json([
                 'message' => __('Redirecting to payment...'),
                 'redirect' => route('customer.payment.paydhara.page', ['order' => $order->id]),
             ]);
         }
-
-        // COD (and anything else settled offline): the order is placed now.
-        $this->sendOrderConfirmationEmail($order);
 
         return response()->json([
             'message' => __('Order place successfully.'),
@@ -269,84 +263,60 @@ class PaymentController extends Controller
         Cookie::queue(Cookie::forget('total_vat'));
         Cookie::queue(Cookie::forget('shipping'));
 
-        // The confirmation email is NOT sent here. An order created for an online
-        // payment is still unpaid at this point, so mailing now would confirm an
-        // order the customer has not yet paid for. index() sends it for COD, and
-        // settleFromGateway() sends it once the gateway confirms payment.
+        $this->sendOrderConfirmationEmail($order, $request, $name, $cart, $subTotal);
 
         return $order;
     }
 
-    /**
-     * Send the order confirmation email - exactly once per order.
-     *
-     * Everything is derived from the Order row rather than the request/cart,
-     * because this also runs from the gateway webhook where neither exists.
-     */
-    private function sendOrderConfirmationEmail(Order $order): void
+    private function sendOrderConfirmationEmail(Order $order, Request $request, string $name, $cart, $subTotal): void
     {
-        $meta = $order->meta ?? [];
-
-        // Idempotency guard. settleFromGateway() can be reached from the webhook,
-        // the browser return and the status poll - without this the customer
-        // would get the same confirmation two or three times.
-        if (!empty($meta['confirmation_mail_sent_at'])) {
-            return;
-        }
-
-        $recipient = $order->user_email;
+        $recipient = auth('customer')->user()->email ?? null;
         if (!$recipient) {
             return;
         }
 
-        // Claim the send before dispatching so concurrent callbacks cannot race.
-        $meta['confirmation_mail_sent_at'] = now()->toDateTimeString();
-        $order->forceFill(['meta' => $meta])->save();
-
-        $order->loadMissing('items');
-
-        // The mail template iterates cart-shaped items (->id, ->quantity), so
-        // map the persisted order lines onto that shape.
-        $cart = $order->items->map(fn ($item) => (object) [
-            'id' => $item->product_id,
-            'quantity' => $item->qty,
-        ]);
-
-        $subTotal = (float) $order->total_price;
-        $shipping = (float) $order->shipping_cost;
-        $discount = (float) ($order->coupon_discount ?? 0);
-
         $payload = [
-            'name'           => trim($order->shipping_name ?: $order->user_first_name) ?: __('Customer'),
-            'order_no'       => $order->order_no,
-            'order_id'       => $order->id,
-            'subTotal'       => $subTotal,
-            'shippingCost'   => $shipping,
-            'couponDiscount' => $discount,
-            'grandTotal'     => $subTotal + $shipping - $discount,
-            'paymentBy'      => $order->payment_by,
-            'paymentStatus'  => $order->payment_status,
-            'mobile'         => $order->shipping_mobile ?: $order->user_mobile,
-            'email'          => $recipient,
-            'cart'           => $cart,
-            'billing'        => $meta['billing'] ?? [],
-            'shipping'       => $meta['shipping'] ?? [],
+            'request'      => $request,
+            'name'         => $name,
+            'order_no'     => $order->order_no,
+            'order_id'     => $order->id,
+            'subTotal'     => $subTotal,
+            'shippingCost' => $order->shipping_cost ?? 0,
+            'couponDiscount' => $order->coupon_discount ?? 0,
+            'grandTotal'   => ($subTotal + ($order->shipping_cost ?? 0)) - ($order->coupon_discount ?? 0),
+            'paymentBy'    => $order->payment_by,
+            'paymentStatus'=> $order->payment_status,
+            'mobile'       => $request->mobile,
+            'email'        => $recipient,
+            'cart'         => $cart,
+            'billing'      => [
+                'address_1' => $request->billing_address,
+                'address_2' => $request->billing_address_2,
+                'city'      => $request->billing_city,
+                'district'  => $request->billing_district,
+                'state'     => $request->billing_state,
+                'pincode'   => $request->billing_pincode,
+                'country'   => 'India',
+            ],
+            'shipping'     => [
+                'address_1' => $request->shipping_address,
+                'address_2' => $request->shipping_address_2,
+                'city'      => $request->shipping_city,
+                'district'  => $request->shipping_district,
+                'state'     => $request->shipping_state,
+                'pincode'   => $request->shipping_pincode,
+                'country'   => 'India',
+            ],
         ];
 
-        $orderId = $order->id;
-
-        // Deferred to the terminating stage so a slow SMTP handshake cannot hold
-        // the request open until PHP-FPM times out (which surfaces as a 502).
-        app()->terminating(function () use ($recipient, $payload, $orderId) {
-            try {
-                Mail::to($recipient)->send(new OrderPending($payload));
-            } catch (\Throwable $e) {
-                Log::warning('Order confirmation email failed: ' . $e->getMessage(), [
-                    'order_id' => $orderId,
-                    'recipient' => $recipient,
-                ]);
-            }
-        });
+        try {
+            Mail::to($recipient)->send(new OrderPending($payload));
+        } catch (\Throwable $e) {
+            Log::warning('Order confirmation email failed: ' . $e->getMessage(), [
+                'order_id' => $order->id,
+                'recipient' => $recipient,
+            ]);
+        }
     }
 
     /**
@@ -536,10 +506,6 @@ class PaymentController extends Controller
                 'paid_amount'    => PaydharaService::orderAmount($order),
                 'meta'           => $meta,
             ])->save();
-
-            // Payment confirmed - this is the point the order is actually placed.
-            $this->sendOrderConfirmationEmail($order->refresh());
-
             return;
         }
 
