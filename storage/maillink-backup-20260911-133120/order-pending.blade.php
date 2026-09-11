@@ -85,23 +85,15 @@
                 <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse; border:1px solid #eaeaea;">
                     @if($data['cart'])
                         @foreach($data['cart'] as $item)
-                            {{-- Product images are linked, not embedded. $message->embed()
-                                 attaches every image into the message body, which made a
-                                 multi-item order email several megabytes to send. --}}
-                            @php($itemSlug = CartItem::slug($item->id))
                             <tr>
+                                <td style="padding:10px; border-bottom:1px solid #f0f0f0; width:130px;">
+                                    <img src="{{ $message->embed('uploads/products/galleries/'.CartItem::thumbnail($item->id)) }}" alt="" width="120" style="display:block; border-radius:4px;">
+                                </td>
                                 <td style="padding:10px; font-size:14px; line-height:1.6; border-bottom:1px solid #f0f0f0;">
-                                    @if($itemSlug)
-                                        <a href="{{ route('product', $itemSlug) }}" style="color:#4C1D6B; text-decoration:none; font-weight:bold;">{{ CartItem::name($item->id) }}</a><br>
-                                    @else
-                                        <strong>{{ CartItem::name($item->id) }}</strong><br>
-                                    @endif
+                                    <strong>{{ CartItem::name($item->id) }}</strong><br>
                                     <span style="color:#666;">{{ __('Price') }}:</span> {{ currency(CartItem::price($item->id),2) }}<br>
                                     <span style="color:#666;">{{ __('Quantity') }}:</span> {{ $item->quantity }}<br>
                                     <span style="color:#666;">{{ __('Total') }}:</span> <strong>{{ currency(CartItem::price($item->id,$item->quantity),2) }}</strong>
-                                    @if($itemSlug)
-                                        <br><a href="{{ route('product', $itemSlug) }}" style="color:#4C1D6B; font-size:13px;">{{ __('View product') }} &rarr;</a>
-                                    @endif
                                 </td>
                             </tr>
                         @endforeach

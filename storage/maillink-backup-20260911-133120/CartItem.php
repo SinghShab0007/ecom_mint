@@ -25,19 +25,6 @@ class CartItem
     }
 
     /**
-     * Product slug, used to link back to the product page from emails.
-     *
-     * @param $id
-     * @return string
-     */
-    public static function slug($id): string
-    {
-        $product = Product::query()->findOrNew($id);
-
-        return (string) ($product->slug ?? '');
-    }
-
-    /**
      * @param $id
      * @return string
      */
