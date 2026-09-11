@@ -13,3 +13,12 @@ storage/**/.env.*
 # Nothing depends on either file.
 storage/pg-backup-20260827-133214/database/seeds/PaymentGatewaySeeder.php
 vendor/stripe/stripe-php/README.md
+
+# Runtime files the app rewrites on every request. Tracking these made every
+# `git pull` on the server abort with "local changes would be overwritten".
+# storage/app/public (product images) stays tracked.
+storage/logs/*
+!storage/logs/.gitignore
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*

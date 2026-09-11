@@ -1,1 +1,0 @@
-1789112355a:9:{s:4:"name";s:19:"PromotionManagement";s:5:"alias";s:19:"promotionmanagement";s:11:"description";s:0:"";s:8:"keywords";a:0:{}s:8:"priority";i:0;s:9:"providers";a:1:{i:0;s:84:"App\Modules\Backend\PromotionManagement\Providers\PromotionManagementServiceProvider";}s:7:"aliases";a:0:{}s:5:"files";a:0:{}s:8:"requires";a:0:{}}
