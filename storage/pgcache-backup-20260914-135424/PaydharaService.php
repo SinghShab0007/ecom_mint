@@ -62,7 +62,7 @@ class PaydharaService
     public function getAccessToken(bool $forceRefresh = false): ?string
     {
         if (!$forceRefresh) {
-            $cached = $this->cacheGet(self::TOKEN_CACHE_KEY);
+            $cached = Cache::get(self::TOKEN_CACHE_KEY);
             if (is_string($cached) && $cached !== '') {
                 return $cached;
             }
@@ -97,41 +97,9 @@ class PaydharaService
                 $ttl = max(60, $expiresAt - time() - 60);
             }
         }
-        // Caching the token is an optimisation, not a requirement. If the cache
-        // store is unwritable the payment must still go through - we simply
-        // fetch a fresh token on the next call.
-        $this->cachePut(self::TOKEN_CACHE_KEY, $token, $ttl);
+        Cache::put(self::TOKEN_CACHE_KEY, $token, $ttl);
 
         return $token;
-    }
-
-    /** Cache reads/writes must never take a payment down. */
-    private function cacheGet(string $key)
-    {
-        try {
-            return Cache::get($key);
-        } catch (\Throwable $e) {
-            Log::warning('Paydhara token cache unreadable: ' . $e->getMessage());
-            return null;
-        }
-    }
-
-    private function cachePut(string $key, string $value, int $ttl): void
-    {
-        try {
-            Cache::put($key, $value, $ttl);
-        } catch (\Throwable $e) {
-            Log::warning('Paydhara token cache unwritable: ' . $e->getMessage());
-        }
-    }
-
-    private function cacheForget(string $key): void
-    {
-        try {
-            Cache::forget($key);
-        } catch (\Throwable $e) {
-            Log::warning('Paydhara token cache not clearable: ' . $e->getMessage());
-        }
     }
 
     /**
@@ -170,7 +138,7 @@ class PaydharaService
 
         // An expired token surfaces as 401; refresh once and replay.
         if ($status === 401 && $retryOnAuthFailure) {
-            $this->cacheForget(self::TOKEN_CACHE_KEY);
+            Cache::forget(self::TOKEN_CACHE_KEY);
             $this->getAccessToken(true);
             return $this->request($path, $payload, false);
         }
