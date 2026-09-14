@@ -30,6 +30,9 @@ class PaymentController extends Controller
     /** Value stored in orders.payment_by for the online gateway. */
     public const GATEWAY = 'Paydhara';
 
+    /** How long an issued Paydhara payment link is reused before minting a new one. */
+    private const LINK_REUSE_MINUTES = 15;
+
     /**
      * Customer-facing label for a stored payment_by value.
      *
@@ -422,8 +425,21 @@ class PaymentController extends Controller
             ], 400);
         }
 
-        // A fresh reference per attempt keeps retries from colliding with an
-        // earlier attempt that may still be settling at the gateway.
+        $meta = $order->meta ?? [];
+
+        // Reuse a link issued moments ago. The redirect page calls this on every
+        // load, so without this each refresh opened a NEW order at Paydhara -
+        // which is what exhausted their rate limit ("Too many requests").
+        $existingLink = $meta['paydhara_payment_link'] ?? null;
+        $issuedAt = isset($meta['paydhara_link_issued_at']) ? strtotime($meta['paydhara_link_issued_at']) : 0;
+
+        if ($order->payment_ref && $existingLink && $issuedAt > now()->subMinutes(self::LINK_REUSE_MINUTES)->timestamp) {
+            return response()->json([
+                'success'      => true,
+                'payment_link' => $existingLink,
+            ]);
+        }
+
         $refId = PaydharaService::buildRefId($order->id);
         $result = $service->createOrder($order, $refId);
 
@@ -431,13 +447,25 @@ class PaymentController extends Controller
             return response()->json(['success' => false, 'message' => $result['message']], 400);
         }
 
+        // Keep every refid ever issued for this order. A customer may pay on an
+        // older link after a newer one was created; its callback must still
+        // resolve to this order instead of being dropped as unknown.
+        $refids = $meta['paydhara_refids'] ?? [];
+        if (!empty($meta['paydhara_refid']) && !in_array($meta['paydhara_refid'], $refids, true)) {
+            $refids[] = $meta['paydhara_refid'];
+        }
+        $refids[] = $refId;
+
         $order->forceFill([
             'payment_ref' => $refId,
-            'meta' => array_merge($order->meta ?? [], [
-                'gateway'            => self::GATEWAY,
-                'paydhara_refid'     => $refId,
-                'paydhara_txn_id'    => $result['transaction_id'],
-                'paydhara_reference' => $result['reference_id'],
+            'meta' => array_merge($meta, [
+                'gateway'                 => self::GATEWAY,
+                'paydhara_refid'          => $refId,
+                'paydhara_refids'         => array_values(array_unique($refids)),
+                'paydhara_txn_id'         => $result['transaction_id'],
+                'paydhara_reference'      => $result['reference_id'],
+                'paydhara_payment_link'   => $result['payment_link'],
+                'paydhara_link_issued_at' => now()->toDateTimeString(),
             ]),
         ])->save();
 
@@ -464,7 +492,7 @@ class PaymentController extends Controller
             return response()->json(['success' => false, 'message' => 'refid missing'], 400);
         }
 
-        $order = Order::query()->where('payment_ref', $refId)->first();
+        $order = $this->findOrderByRefId($refId);
         if (!$order) {
             Log::warning('Paydhara webhook for unknown refid', ['refid' => $refId]);
             return response()->json(['success' => false, 'message' => 'order not found'], 404);
@@ -481,7 +509,7 @@ class PaymentController extends Controller
     public function paydharaReturn(Request $request)
     {
         $refId = $this->extractRefId($request->all());
-        $order = $refId ? Order::query()->where('payment_ref', $refId)->first() : null;
+        $order = $refId ? $this->findOrderByRefId($refId) : null;
 
         // The hosted page may return without any reference, so fall back to the
         // pending order this session just created.
@@ -493,8 +521,8 @@ class PaymentController extends Controller
             return redirect()->route('customer.order');
         }
 
-        if ($order->payment_status === 'pending' && $order->payment_ref) {
-            $this->settleFromGateway($order, $order->payment_ref);
+        if ($order->payment_status === 'pending' && ($refId || $order->payment_ref)) {
+            $this->settleFromGateway($order, $refId ?: $order->payment_ref);
             $order->refresh();
         }
 
@@ -569,6 +597,16 @@ class PaymentController extends Controller
 
         // pending / unknown - leave the order pending and keep the audit trail.
         $order->forceFill(['meta' => $meta])->save();
+    }
+
+    /**
+     * Resolve an order from any refid ever issued for it - the current
+     * payment_ref, or an earlier one kept in meta.paydhara_refids.
+     */
+    private function findOrderByRefId(string $refId): ?Order
+    {
+        return Order::query()->where('payment_ref', $refId)->first()
+            ?? Order::query()->whereJsonContains('meta->paydhara_refids', $refId)->first();
     }
 
     /** Pull the merchant reference out of a webhook/return payload. */
